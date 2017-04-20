@@ -4,15 +4,15 @@
       <ion-list id="login-list2">
         <label class="item item-input" id="login-input1">
           <span class="input-label">Username</span>
-          <input type="text" ng-model="user.name" placeholder="Enter Username">
+          <input type="text" ng-model="login.userName" placeholder="Enter Username">
         </label>
         <label class="item item-input" id="login-input2">
           <span class="input-label">Password</span>
-          <input type="password" ng-model="user.password" placeholder="Enter Password">
+          <input type="password" ng-model="login.password" placeholder="Enter Password">
         </label>
       </ion-list>
       <div class="spacer" style="height: 40px;"></div>
-      <a ui-sref="menu.quizCreator" id="login-button1" class="button button-stable  button-block">Log in</a>
+      <button id="login-button1" ng-click="checkUser(login)" class="button button-stable  button-block ">Log in</button>
       <a ui-sref="signup" id="login-button2" class="button button-positive  button-block button-clear">Create An Account</a>
     </form>
   </ion-content>

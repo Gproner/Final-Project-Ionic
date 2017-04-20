@@ -68,8 +68,17 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.logOut', {
+    url: '/logOut',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/logOut.html',
+        controller: 'logOutCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/login')
 
   
-
 });

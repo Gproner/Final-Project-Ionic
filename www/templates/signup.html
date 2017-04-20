@@ -1,0 +1,43 @@
+<div ng-controller="appCtrl">
+<ion-view title="Signup" id="page5">
+  <ion-content padding="true" class="has-header">
+    <form id="signup-form2" class="list">
+      <ion-list id="signup-list3">
+        <label class="item item-input" id="signup-input3" name="firstName">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="user.firstName" placeholder="First Name">
+        </label>
+        <label class="item item-input" id="signup-input6" name="lastName">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="user.lastName" placeholder="Last Name">
+        </label>
+        <label class="item item-input" id="signup-input7" name="age">
+          <span class="input-label">Age</span>
+          <input type="text" ng-model="user.age" placeholder="20">
+        </label>
+        <label class="item item-input" id="signup-input8" name="country">
+          <span class="input-label">Country</span>
+          <input type="text" ng-model="user.country" placeholder="Canada">
+        </label>
+        <label class="item item-select" id="signup-select1" name="educationList">
+          <span>Education</span>
+          <select ng-model="user.education">
+            <option value="E">Elementary</option>
+            <option value="HS">High School</option>
+            <option value="PS">Post Secondary</option>
+          </select>
+        </label>
+        <label class="item item-input" id="signup-input4">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="user.name" placeholder="">
+        </label>
+        <label class="item item-input" id="signup-input5">
+          <span class="input-label">Password</span>
+          <input type="text" ng-model="user.password" placeholder="">
+        </label>
+      </ion-list>
+      <button class="button button-positive button-block" ng-click="add(user)">Sign up</a>
+    </form>
+  </ion-content>
+</ion-view>
+</div>

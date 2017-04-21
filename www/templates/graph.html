@@ -3,14 +3,12 @@
     <button class="button icon ion-arrow-graph-up-right"> graph!</button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
-    <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-      <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-    </div>
-    <form id="graph-form3" class="list">
-      <label class="item item-input" id="graph-input9" name="equation">
-        <span class="input-label">Equation</span>
-        <input type="text" placeholder="">
-      </label>
-    </form>
+  <form id="form">
+  <label for="eq">Enter an equation:</label>
+  <input type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" />
+  <input type="submit" value="Draw" class="button button-positive  button-block" />
+</form>
+
+<div id="plot"></div>
   </ion-content>
 </ion-view>

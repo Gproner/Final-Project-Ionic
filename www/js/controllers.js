@@ -34,7 +34,86 @@ function ($scope, $stateParams) {
 .controller('flashCardsCtrl', ['$scope', '$stateParams',
 function ($scope, $stateParams) {
 
+  var a, b, c, d, answer;
+            var questions = [];
+            var ed = ["E", "HS"];
+            
+            var div = function  DivProblem() {
+                if (ed[1]) {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    answer = Math.round(a / b);
+                    document.getElementById('q1').innerText = a+' / '+b+' = ?';
+                    document.getElementById('a1').innerText= answer; 
+                } else {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    c = (int)(1 + 9 * Math.random());
+                    d = (int)(1 + 9 * Math.random());
+                    answer = Math.round((a / b) / (c / d));
+                    document.getElementById('q1').innerText = '('+a+' / '+b+')/( '+c+'/'+d+  ' = ?';
+                    document.getElementById('a1').innerText= answer; 
+                }
+            }
 
+            var mult = function  MultProblem() {
+                if (ed[0]) {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    answer = Math.round(a * b);
+                    document.getElementById('q2').innerText = a+' * '+b+' = ?';
+                    document.getElementById('a2').innerText= answer;
+                } else {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    c = (int)(1 + 9 * Math.random());
+                    d = (int)(1 + 9 * Math.random());
+                    answer = Math.round((a / b) * (c / d));
+                    document.getElementById('q2').innerText = '('+a+' / '+b+')*( '+c+'/'+d+  ' = ?';
+                    document.getElementById('a2').innerText= answer; 
+                }
+            }
+
+            var add = function  AddProblem() {
+                if (ed[0]) {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    answer = Math.round(a + b);
+                    document.getElementById('q3').innerText = a+' + '+b+' = ?';
+                    document.getElementById('a3').innerText= answer;
+                } else {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    c = (int)(1 + 9 * Math.random());
+                    d = (int)(1 + 9 * Math.random());
+                    answer = Math.round((a / b) + (c / d));
+                    document.getElementById('q3').innerText = '('+a+' / '+b+')+( '+c+'/'+d+  ' = ?';
+                    document.getElementById('a3').innerText= answer; 
+                }
+            }
+
+            var sub = function  SubProblem() {
+                if (ed[0]) {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    answer = Math.round(a - b);
+                    document.getElementById('q4').innerText = a+' - '+b+' = ?';
+                    document.getElementById('a4').innerText= answer;
+                } else {
+                    a = (int)(1 + 9 * Math.random());
+                    b = (int)(1 + 9 * Math.random());
+                    c = (int)(1 + 9 * Math.random());
+                    d = (int)(1 + 9 * Math.random());
+                    answer = Math.round((a / b) - (c / d));
+                    document.getElementById('q4').innerText = '('+a+' / '+b+')-( '+c+'/'+d+  ' = ?';
+                    document.getElementById('a4').innerText= answer; 
+                }
+            }
+
+div();
+mult();
+add();
+sub();
 }])
    
 .controller('settingsCtrl', ['$scope', '$stateParams',
